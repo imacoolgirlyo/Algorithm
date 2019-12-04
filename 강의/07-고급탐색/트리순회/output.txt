@@ -1,0 +1,1 @@
+{'A': <__main__.Node object at 0x10341c2b0>, 'B': <__main__.Node object at 0x10341c2e8>, 'C': <__main__.Node object at 0x10341c320>, 'E': <__main__.Node object at 0x10341c358>, 'F': <__main__.Node object at 0x10341c390>, 'D': <__main__.Node object at 0x10341c3c8>, 'G': <__main__.Node object at 0x10341c278>}
