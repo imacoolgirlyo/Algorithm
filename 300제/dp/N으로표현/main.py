@@ -7,6 +7,7 @@ def solution(N, number):
                 for y in S[i-i_half]:
                     case_set.add(x+y)
                     case_set.add(x-y)
+                    case_set.add(y-x)
                     case_set.add(x*y)
                     if x != 0:
                         case_set.add(y//x)
@@ -15,7 +16,8 @@ def solution(N, number):
         if number in case_set:
             return i
         S.append(case_set)
+        print(S)
     return -1
 
 
-print(solution(2, 11))
+print(solution(5, 12))
