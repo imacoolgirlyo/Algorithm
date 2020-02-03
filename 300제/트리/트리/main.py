@@ -14,24 +14,23 @@ for i in range(n):
         tree[arr[i]].append(i)
         tree[i].append(arr[i])
 
-print(tree)
-
 
 def dfs(data):
     global result
     visited[data] = 1
-    print(data)
-    if len(tree[data]) == 1 and visited[tree[data][0]]:  # target이거나 target의 자식들은 이곳에 오지 못함
+    isLeaf = True
+
+    for c in tree[data]:
+        if not visited[c] and c != target:  # 자식이 target이 아닐 때 해당 값으로 dfs 호출
+            isLeaf = False
+            dfs(c)
+    if isLeaf:
         result += 1
-        return
-    for child in tree[data]:
-        if not visited[child] and child != target:
-            dfs(child)
     return
 
 
 if root != target:
     dfs(root)
-    print('result', result)
+    print(result)
 else:
     print(0)
